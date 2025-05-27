@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Administración</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/admin.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav-main" role="navigation" aria-label="Navegación principal">
+            <div class="container">
+                <a href="index.html" class="logo">AH Admin</a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="noticias.html">Noticias</a></li>
+                    <li><a href="tienda.html">Tienda</a></li>
+                    <li><button id="btn-logout" class="btn-logout">Cerrar Sesión</button></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <div class="admin-container">
+                <div class="admin-header">
+                    <h1>Panel de Administración</h1>
+                    <div class="user-info">
+                        Bienvenido, <span id="username-display"></span>
+                    </div>
+                </div>
+
+                <nav class="admin-nav">
+                    <button class="active" data-section="noticias">Noticias</button>
+                    <button data-section="productos">Productos</button>
+                </nav>
+
+                <div class="admin-content">
+                    <!-- Sección de Noticias -->
+                    <section id="noticias-section" class="content-section">
+                        <h2>Gestionar Noticias</h2>
+                        <button class="btn-primary" id="nueva-noticia">Nueva Noticia</button>
+                        
+                        <form id="noticia-form" class="content-form" style="display: none;">
+                            <div class="form-group">
+                                <label for="noticia-titulo">Título:</label>
+                                <input type="text" id="noticia-titulo" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="noticia-descripcion">Descripción:</label>
+                                <textarea id="noticia-descripcion" required></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="noticia-categoria">Categoría:</label>
+                                <select id="noticia-categoria" required>
+                                    <option value="desarrollo-web">Desarrollo Web</option>
+                                    <option value="ia">Inteligencia Artificial</option>
+                                    <option value="ciberseguridad">Ciberseguridad</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="noticia-imagen">Imagen:</label>
+                                <input type="file" id="noticia-imagen" accept="image/*" required>
+                                <div class="image-preview"></div>
+                            </div>
+                            <button type="submit" class="btn-primary">Guardar Noticia</button>
+                        </form>
+
+                        <table class="content-table">
+                            <thead>
+                                <tr>
+                                    <th>Título</th>
+                                    <th>Categoría</th>
+                                    <th>Fecha</th>
+                                    <th>Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody id="noticias-lista">
+                                <!-- Las noticias se cargarán dinámicamente aquí -->
+                            </tbody>
+                        </table>
+                    </section>
+
+                    <!-- Sección de Productos -->
+                    <section id="productos-section" class="content-section" style="display: none;">
+                        <h2>Gestionar Productos</h2>
+                        <button class="btn-primary" id="nuevo-producto">Nuevo Producto</button>
+                        
+                        <form id="producto-form" class="content-form" style="display: none;">
+                            <div class="form-group">
+                                <label for="producto-nombre">Nombre:</label>
+                                <input type="text" id="producto-nombre" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="producto-descripcion">Descripción:</label>
+                                <textarea id="producto-descripcion" required></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="producto-precio">Precio:</label>
+                                <input type="number" id="producto-precio" step="0.01" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="producto-enlace">Enlace de Amazon:</label>
+                                <input type="url" id="producto-enlace" placeholder="https://www.amazon.com/..." required>
+                            </div>
+                            <div class="form-group">
+                                <label for="producto-categoria">Categoría:</label>
+                                <select id="producto-categoria" required>
+                                    <option value="laptops">Laptops</option>
+                                    <option value="monitores">Monitores</option>
+                                    <option value="perifericos">Periféricos</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="producto-imagen">Imagen:</label>
+                                <input type="file" id="producto-imagen" accept="image/*" required>
+                                <div class="image-preview"></div>
+                            </div>
+                            <button type="submit" class="btn-primary">Guardar Producto</button>
+                        </form>
+
+                        <table class="content-table">
+                            <thead>
+                                <tr>
+                                    <th>Nombre</th>
+                                    <th>Precio</th>
+                                    <th>Categoría</th>
+                                    <th>Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody id="productos-lista">
+                                <!-- Los productos se cargarán dinámicamente aquí -->
+                            </tbody>
+                        </table>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Anderson Hurtado - Panel de Administración</p>
+        </div>
+    </footer>
+
+    <script src="js/admin.js"></script>
+</body>
+</html> 

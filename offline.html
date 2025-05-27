@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sin conexión | Anderson Hurtado</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #4834D4, #686DE0);
+            color: white;
+            text-align: center;
+        }
+
+        .offline-container {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            width: 90%;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+
+        .retry-button {
+            background: white;
+            color: #4834D4;
+            border: none;
+            padding: 1rem 2rem;
+            font-size: 1.1rem;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .retry-button:hover {
+            transform: scale(1.05);
+        }
+
+        .cached-content {
+            margin-top: 2rem;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <div class="offline-container">
+        <h1>¡Sin conexión!</h1>
+        <p>Parece que no tienes conexión a internet en este momento. Algunas funciones pueden no estar disponibles.</p>
+        <button class="retry-button" onclick="window.location.reload()">
+            Intentar nuevamente
+        </button>
+        <div class="cached-content">
+            <p>Puedes acceder al contenido que hayas visitado anteriormente mientras estabas en línea.</p>
+        </div>
+    </div>
+</body>
+</html> 

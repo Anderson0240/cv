@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Detalles del producto">
+    <meta name="author" content="Anderson Hurtado">
+    <title>Detalle del Producto | Anderson Hurtado</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/tienda.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav-main" role="navigation" aria-label="Navegación principal">
+            <div class="container">
+                <a href="index.html" class="logo">AH Store</a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="noticias.html">Noticias</a></li>
+                    <li><a href="tienda.html">Tienda</a></li>
+                    <li>
+                        <div class="cart-icon" id="cart-toggle">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="cart-count">0</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Carrito lateral -->
+    <div class="cart-sidebar" id="cart-sidebar">
+        <div class="cart-header">
+            <h2>Carrito de Compras</h2>
+            <button class="close-cart" id="close-cart">&times;</button>
+        </div>
+        <div class="cart-items" id="cart-items">
+            <!-- Los items del carrito se insertarán aquí -->
+        </div>
+        <div class="cart-total">
+            <span>Total:</span>
+            <span id="cart-total">$0.00</span>
+        </div>
+        <button class="checkout-btn" id="checkout-btn">Proceder al Pago</button>
+    </div>
+
+    <main class="main-content">
+        <div class="container">
+            <article class="producto-detalle" id="producto-contenido">
+                <!-- El contenido se cargará dinámicamente aquí -->
+            </article>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Anderson Hurtado - Tech Store</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/producto-detalle.js"></script>
+</body>
+</html> 

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es" itemscope itemtype="https://schema.org/WebPage">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tienda de productos tecnológicos, cursos y recursos para desarrolladores">
+    <meta name="keywords" content="tienda tech, cursos programación, libros desarrollo, software">
+    <meta name="author" content="Anderson Hurtado">
+    <title>Tienda Tech | Anderson Hurtado</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/tienda.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Bibliotecas para efectos -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.7.0/dist/vanilla-tilt.min.js"></script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Store",
+      "name": "Tienda Tech Anderson Hurtado",
+      "description": "Tienda de productos tecnológicos, cursos y recursos para desarrolladores",
+      "url": "tienda.html",
+      "image": "mi_foto.jpeg",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "Colombia"
+      },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "tienda.html?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      },
+      "offers": {
+        "@type": "AggregateOffer",
+        "priceCurrency": "USD",
+        "seller": {
+          "@type": "Person",
+          "name": "Anderson Hurtado"
+        }
+      }
+    }
+    </script>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-XXXXX');</script>
+    <!-- End Google Tag Manager -->
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXX"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    
+    <!-- Contenedor para partículas -->
+    <div id="particles-js"></div>
+
+    <header class="header">
+        <nav class="nav-main" role="navigation" aria-label="Navegación principal">
+            <div class="container">
+                <a href="index.html" class="logo">AH Store</a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="noticias.html">Noticias</a></li>
+                    <li><a href="tienda.html" class="active" aria-current="page">Tienda</a></li>
+                </ul>
+                <div class="cart-icon" id="cart-toggle" role="button" aria-label="Carrito de compras">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count" aria-label="Cantidad de items">0</span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="cart-sidebar" id="cart-sidebar" role="complementary" aria-label="Carrito de compras" itemscope itemtype="https://schema.org/ShoppingCart">
+        <div class="cart-header">
+            <h2>Carrito de Compras</h2>
+            <button class="close-cart" id="close-cart" aria-label="Cerrar carrito">&times;</button>
+        </div>
+        <div class="cart-items" id="cart-items" itemprop="itemListElement" itemscope itemtype="https://schema.org/ItemList">
+            <!-- Los items del carrito se insertarán aquí -->
+        </div>
+        <div class="cart-total">
+            <span>Total:</span>
+            <span id="cart-total" itemprop="price">$0.00</span>
+        </div>
+        <button class="checkout-btn" id="checkout-btn">Proceder al Pago</button>
+    </div>
+
+    <main class="main-content">
+        <div class="container">
+            <section class="products">
+                <h1>Nuestros Productos</h1>
+                
+                <div class="filters" id="product-filters" role="group" aria-label="Filtros de productos">
+                    <button class="filter-btn active" data-category="todos">Todos</button>
+                    <button class="filter-btn" data-category="laptops">Laptops</button>
+                    <button class="filter-btn" data-category="monitores">Monitores</button>
+                    <button class="filter-btn" data-category="perifericos">Periféricos</button>
+                </div>
+
+                <div class="products-grid" id="products-grid" itemscope itemtype="https://schema.org/ItemList">
+                    <meta itemprop="numberOfItems" content="0" />
+                    <meta itemprop="itemListOrder" content="Unordered" />
+                    <!-- Los productos se cargarán dinámicamente aquí -->
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Anderson Hurtado - Tienda Tech</p>
+        </div>
+    </footer>
+
+    <script src="js/tienda.js"></script>
+</body>
+</html> 

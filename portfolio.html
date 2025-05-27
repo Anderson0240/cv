@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Administración | Anderson Hurtado</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/admin.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav-main" role="navigation" aria-label="Navegación principal">
+            <div class="container">
+                <a href="portfolio.html" class="logo">AH Admin</a>
+                <ul class="nav-links">
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="noticias.html">Noticias</a></li>
+                    <li><a href="tienda.html">Tienda</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <div class="login-container">
+                <h1>Panel de Administración</h1>
+                <form id="login-form" class="login-form">
+                    <div class="form-group">
+                        <label for="username">Usuario:</label>
+                        <input type="text" id="username" name="username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Contraseña:</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+                    <button type="submit" class="btn-primary">Iniciar Sesión</button>
+                </form>
+                <div id="error-message" class="error-message"></div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Anderson Hurtado - Panel de Administración</p>
+        </div>
+    </footer>
+
+    <script src="js/login.js"></script>
+</body>
+</html>

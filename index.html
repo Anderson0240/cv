@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es" itemscope itemtype="https://schema.org/ProfilePage">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio de Anderson Hurtado - Desarrollador de Software" />
+    <meta name="author" content="Anderson Hurtado"/>
+    <title>Anderson Hurtado - Portfolio</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfilePage",
+      "mainEntity": {
+        "@type": "Person",
+        "name": "Anderson Hurtado",
+        "jobTitle": "Ingeniero de Software",
+        "image": "mi_foto.jpeg",
+        "email": "andersonhurtado@gmail.com",
+        "telephone": "+57 322 386 3501",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Bogota D.C",
+          "addressCountry": "Colombia"
+        },
+        "url": "https://www.linkedin.com/in/anderson-yecid-hurtado-puentes-40bb4a254/",
+        "alumniOf": [
+          {
+            "@type": "EducationalOrganization",
+            "name": "Universidad Manuela Beltran",
+            "programName": "Ingenieria De Software"
+          },
+          {
+            "@type": "EducationalOrganization",
+            "name": "SENA",
+            "programName": "Tecnico en sistemas"
+          }
+        ],
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Luna Park 2",
+          "jobTitle": "Mantenimiento de redes"
+        }
+      }
+    }
+    </script>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav-main" role="navigation" aria-label="Navegación principal">
+            <div class="container">
+                <a href="index.html" class="logo">AH Portfolio</a>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="active" aria-current="page">Inicio</a></li>
+                    <li><a href="noticias.html">Noticias</a></li>
+                    <li><a href="tienda.html">Tienda</a></li>
+                    <li><a href="login.html">Admin</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="parallax-container">
+        <div class="parallax-background" id="parallax-bg"></div>
+        <div class="overlay">
+            <div class="profile-container" itemscope itemtype="https://schema.org/Person">
+                <img src="mi_foto.jpeg" alt="Foto de Anderson Hurtado" itemprop="image" class="profile-pic" />
+                <div class="info">
+                    <h1 itemprop="name">Anderson Hurtado</h1>
+                    <p itemprop="jobTitle">Ingeniero de Software</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main class="main-content">
+        <div class="container">
+            <section id="sobre-mi" class="block">
+                <h2>Sobre mí</h2>
+                <p itemprop="description">
+                    Estudiante de ingenieria de software en la manuela beltran, cursando quinto semestre de la ingenieria, soy alguien que aprende rapidamente y tengo habilidades de comunicacion.
+                </p>
+            </section>
+
+            <section id="experiencia" class="block">
+                <h2>Experiencia</h2>
+                <article itemscope itemtype="https://schema.org/WorkExperience">
+                    <h3 itemprop="name">Luna Park 2</h3>
+                    <p><strong>Rol:</strong> <span itemprop="jobTitle">Mantenimiento de redes</span></p>
+                    <p><strong>Desde:</strong> <time itemprop="startDate" datetime="2023-01">Enero 2023</time> - <time itemprop="endDate" datetime="2023-06">Junio 2023</time></p>
+                    <p itemprop="description">Mantenimiento de equipos y redes.</p>
+                </article>
+            </section>
+
+            <section id="educacion" class="block">
+                <h2>Educación</h2>
+                <div itemscope itemtype="https://schema.org/EducationalOrganization">
+                    <p><span itemprop="name">Colegio John F Kennedy I.E.D</span> - <span itemprop="educationalLevel">Primaria - Bachillerato</span></p>
+                </div>
+                <div itemscope itemtype="https://schema.org/EducationalOrganization">
+                    <p><span itemprop="name">SENA</span> - <span itemprop="programName">Tecnico en sistemas</span></p>
+                </div>
+                <div itemscope itemtype="https://schema.org/EducationalOrganization">
+                    <p><span itemprop="name">Universidad Manuela Beltran</span> - <span itemprop="programName">Ingenieria De Software</span></p>
+                </div>
+            </section>
+
+            <section id="contacto" class="block">
+                <h2>Contacto</h2>
+                <ul itemscope itemtype="https://schema.org/Person">
+                    <li>Email: <a href="mailto:andersonhurtado@gmail.com" itemprop="email">andersonhurtado@gmail.com</a></li>
+                    <li>Teléfono: <span itemprop="telephone">+57 322 386 3501</span></li>
+                    <li>Ubicación: 
+                        <span itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+                            <span itemprop="addressLocality">Bogota D.C</span>, 
+                            <span itemprop="addressCountry">Colombia</span>
+                        </span>
+                    </li>
+                    <li>LinkedIn: 
+                        <a href="https://www.linkedin.com/in/anderson-yecid-hurtado-puentes-40bb4a254/" target="_blank" rel="noopener" itemprop="sameAs">
+                            https://www.linkedin.com/in/anderson-yecid-hurtado-puentes-40bb4a254/
+                        </a>
+                    </li>
+                </ul>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 <span itemprop="name">Anderson Hurtado</span></p>
+        </div>
+    </footer>
+</body>
+</html> 
